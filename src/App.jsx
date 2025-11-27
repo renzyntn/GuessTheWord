@@ -31,7 +31,7 @@ function App() {
     try {
       const response = await fetch(import.meta.env.VITE_API_URL);
       if (!response.ok) {
-        throw new error ("There was a problem with the API");
+        throw new Error("There was a problem with the API");
       }
       const data = await response.json();
       const word = data[0].word.split(" ").join(""); // Convert the value (string) to array and then join them together (to remove spaces).
